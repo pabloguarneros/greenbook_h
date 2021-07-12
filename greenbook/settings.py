@@ -1,6 +1,5 @@
 
 from pathlib import Path
-from decouple import config
 import os
 import django_heroku
 
@@ -8,9 +7,9 @@ import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["greenboook.herokuapp.com", "127.0.0.1"]
 
 INSTALLED_APPS = [
     'social_django',
@@ -130,9 +129,9 @@ USE_L10N = True
 USE_TZ = True
 
 SOCIAL_AUTH_TRAILING_SLASH = False 
-SOCIAL_AUTH_AUTH0_DOMAIN = config('SOCIAL_AUTH_AUTH0_DOMAIN')
-SOCIAL_AUTH_AUTH0_KEY = config('SOCIAL_AUTH_AUTH0_KEY')
-SOCIAL_AUTH_AUTH0_SECRET = config('SOCIAL_AUTH_AUTH0_SECRET')
+SOCIAL_AUTH_AUTH0_DOMAIN = os.environ.get('SOCIAL_AUTH_AUTH0_DOMAIN')
+SOCIAL_AUTH_AUTH0_KEY = os.environ.get('SOCIAL_AUTH_AUTH0_KEY')
+SOCIAL_AUTH_AUTH0_SECRET = os.environ.get('SOCIAL_AUTH_AUTH0_SECRET')
 
 SOCIAL_AUTH_AUTH0_SCOPE = [
     'openid',
@@ -149,10 +148,9 @@ AUTHENTICATION_BACKENDS = {
 LOGIN_URL = '/login/auth0'
 LOGIN_REDIRECT_URL = '/home'
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 COMPRESS_ROOT = 'static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
