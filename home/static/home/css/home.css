@@ -42,13 +42,17 @@ button{
     font-size:25px;
 }
 
+#login_action{
+    margin-bottom:50px;
+}
+
 #login_action a{
     padding:10px 80px;
     background: rgba(255, 255, 255, 0.34);
     border-radius: 80px;
     font-size: 30px;
     color: #FFFFFF;
-    margin-bottom:30px;
+    margin-bottom:70px;
 }
 
 #bg_mountain{
