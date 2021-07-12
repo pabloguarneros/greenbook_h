@@ -148,7 +148,6 @@ LOGIN_REDIRECT_URL = '/home'
 STATIC_URL = '/static/'
 COMPRESS_ROOT = 'static'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-COMPRESS_ROOT = 'static'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -164,3 +163,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
