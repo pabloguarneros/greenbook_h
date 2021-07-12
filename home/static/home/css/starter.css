@@ -1,0 +1,52 @@
+body {
+    height: 102vh;
+    width: 102vw;
+    overflow:hidden;
+    position : fixed;
+    font-family: 'solway-light', sans-serif;
+    background: #CDE19B;
+    color:#353535;
+}
+
+button{
+    outline:none;
+    border:none;
+    color: #FFFFFF;
+    font-family: 'solway-light', sans-serif;
+}
+
+h1{
+    font-size: 43px;
+    margin:0px;
+}
+
+.green_highlight{
+    color:#2B9348
+}
+
+.h_cent{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.v_cent{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.fc{
+    display:flex;
+    flex-direction: column;
+}
+
+.ac{
+    align-items:center
+}
+
+.tt_cent{
+    text-align: center;
+}
+
+.fr{
+    display:flex
+}

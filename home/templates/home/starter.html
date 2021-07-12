@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <link rel="stylesheet" href="{% static 'home/css/starter.css' %}"></script>
+        <style>
+            @font-face {
+              font-family: 'solway-light';
+              src: local('Solway'),
+                   url("{% static 'fonts/solway/solway-light.ttf' %}");
+            }
+            @font-face {
+              font-family: 'solway-medium';
+              src: local('Solway'),
+                   url("{% static 'fonts/solway/solway-medium.ttf' %}");
+            }
+          </style>
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body>
+
+        {% block body %}
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock %}
+
+    </body>
+
+</html>

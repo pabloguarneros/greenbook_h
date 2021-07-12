@@ -1,0 +1,47 @@
+#plant_profile{
+    justify-content: space-around;
+    height:100%;
+}
+
+#plant_image img{
+    border-radius: 30px;
+    height: 36vh;
+    width:auto;
+}
+
+#plant_detail{
+    margin-right:auto;
+    height: 20vh;
+    margin-left:40px;
+    color: #fcfcfc;
+    justify-content:space-between;
+}
+
+#plant_detail p{
+    margin:0px;
+}
+
+#plant_detail .state_label{
+    font-size: 22px;
+}
+
+#plant_detail .state_value{
+    font-size: 12px;
+}
+
+#plant_profile input{
+    width:50vw;
+    height:40px;
+    padding:10px;
+    font-size:14px;
+}
+
+#add_journal_entry button{
+    padding:10px 40px;
+    border-radius:20px;
+    grid-area:1/1/2/2;
+    background:none;
+    margin:auto;
+    font-size:14px;
+    border:1px solid #FCFCFC;
+}

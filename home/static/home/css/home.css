@@ -1,0 +1,83 @@
+button{
+    padding:10px 80px;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 80px;
+    font-size: 30px;
+}
+
+#body_wrapper{
+    width: 95vw;
+    height: 95vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+#login_wrapper, #bg_wrapper, #appIndex{
+    width: inherit;
+    height: inherit;
+    margin:auto;
+    grid-area: 1/1/2/2;
+}
+
+#bg_wrapper{
+    z-index:1;
+}
+
+#login_wrapper{
+    z-index:2;
+    padding:40px 0px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#login_greeting{
+    height:40%;
+    justify-content: space-around;
+}
+
+#login_greeting p{
+    padding:0px 20px;
+    font-size:25px;
+}
+
+#login_action a{
+    padding:10px 80px;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 80px;
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-bottom:30px;
+}
+
+#bg_mountain{
+    position: absolute;
+    border-radius:270px;
+    width: 135vw;
+    height: 60vh;
+    left:-20vw;
+    bottom:-25vh;
+    background: linear-gradient(199.88deg, #53B175 32.98%, #007F5F 82.78%);
+    transition: bottom 1s ease, left 1s ease, height 1s ease, width 1s ease;
+}
+
+#bg_mountain.grow{
+    bottom:-10vh;
+    left:-40vw;
+    height: 100vh;
+    width: 175vw;
+}
+
+#appIndex{
+    width:95%;
+    height:95%;
+    margin:auto;
+    z-index:3;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 90px;
+    box-sizing: border-box;
+}
+
+
+

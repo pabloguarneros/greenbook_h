@@ -1,0 +1,45 @@
+{% extends 'home/starter.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'home/css/home.css'%}">
+<link rel="stylesheet" href="{% static 'home/css/userProfile.css' %}"></script>
+<link rel="stylesheet" href="{% static 'home/css/plantProfile.css' %}"></script>
+<link rel="stylesheet" href="{% static 'home/css/camera.css' %}"></script>
+
+{% endblock %}
+
+{% block body %}
+<div id="body_wrapper">
+    {% if request.user.is_authenticated %}
+    <div id="appIndex" name={{request.user.pk}}></div>
+    {% else %}
+    <div id="login_wrapper" class="fc ac">
+        <div id="login_greeting" class="fc ac">
+            <h1 class="tt_cent"> Welcome to <span class="green_highlight">Green</span>book </h1>
+            <p class="tt_cent"> Looking for a new sustainable hobby? </p>
+        </div>
+        <div id="login_action" class="login-box auth0-box before">
+            <a class="btn btn-primary btn-lg btn-login btn-block" href="/login/auth0">login</a>
+        </div>
+    </div> <!-- end login_wrapper -->
+    {% endif %}
+    <div id="bg_wrapper">
+        <div id="bg_mountain"></div>
+    </div>  <!-- end bg_wrapper -->
+</div> <!-- end body_wrapper -->
+{% endblock %}
+
+{% block scripts %}
+    {% if request.user.is_authenticated %}
+    <script src="{% static 'home/js/main/mainComponents/fetchingDefaults.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/classes/plantClass.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/classes/recordClass.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/classes/userClass.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/renderUserProfile.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/renderPlantProfile.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/renderCamera.js' %}"></script>
+    <script type="text/babel" src="{% static 'home/js/main/index.js' %}"></script>
+    {% endif %}
+{% endblock %}
