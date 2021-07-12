@@ -147,6 +147,8 @@ LOGIN_REDIRECT_URL = '/home'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 COMPRESS_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+COMPRESS_ROOT = 'static'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
